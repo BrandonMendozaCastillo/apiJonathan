@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Algoritmo de Dijkstra</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vis-network/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Algoritmo de Dijkstra</h1>
+
+    <form id="dijkstraForm">
+      <label>Número de nodos:
+        <input type="number" id="num_nodes" required />
+      </label>
+
+      <label>Nodo de inicio:
+        <input type="number" id="start_node" required />
+      </label>
+      <label>Nodo de destino:
+        <input type="number" id="end_node" required />
+      </label>
+      
+
+      <label>Aristas (formato: origen, destino, peso):
+        <textarea id="edges" rows="6" placeholder="0,1,4\n0,2,1\n1,3,1"></textarea>
+      </label>
+
+      <button type="submit">Resolver</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <pre id="result"></pre>
+
+    <h2>Visualización del grafo:</h2>
+    <div id="network" style="height: 500px;"></div>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
